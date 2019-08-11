@@ -16,7 +16,7 @@ thinks when he is taking the test and therefore his abilities)
 
 ## Introduction
 
-Estimated dedicated time to this pet project: 4h + 2h + 2h + 1h + 2h + 2h + 1h.
+Estimated dedicated time to this pet project: 4h + 2h + 2h + 1h + 2h + 2h + 1h + 1h.
 
 You will see overengineering in this pet project but the goal is not to make a
 CRUD of three entities (vehicles, drivers and trips) but to show different
@@ -104,3 +104,41 @@ only use _OAuth_ (the usual adopted solution for web based apps) but a more gene
 
 * all long runtime applications up their own **glowroot** servers
 * all long runtime applications up their own prometheus **JMX** agents
+
+## Screenshots
+
+### ============== Home ==============
+
+![Home](images/home.png)
+
+### ============== About ==============
+
+![About](images/about.png)
+
+### ============== Licenses ==============
+
+![Licenses](images/licenses.png)
+
+### ============== Drivers ==============
+
+![Drivers](images/drivers.png)
+
+### ============== Carfleet ==============
+
+![Carfleet](images/carfleet.png)
+
+### ============== Trips ==============
+
+![Trips](images/trips.png)
+
+### ============== Error handling ==============
+
+![Error handling](images/errorhandling.png)
+
+### ============== Prometheus ==============
+
+![Prometheus target](images/prometheus.png)
+
+![Prometheus events](images/prometheus_events.png)
+
+![Prometheus metrics](images/prometheus_metrics.png)

@@ -50,7 +50,7 @@ export default {
     },
     methods: {
         handleError(e) {
-            this.error = e.message;
+            this.error = e.message || e.response.body.message;
         }
     }
 }

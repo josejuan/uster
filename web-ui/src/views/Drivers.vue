@@ -84,7 +84,7 @@ export default {
     },
     mounted() {
         this.reloadList();
-        Uster.getLicenses().then(r => this.licenses = r.body, console.error);
+        Uster.getLicenses().then(r => this.licenses = r.body, this.handleError);
     },
     methods: {
         save() {
@@ -115,7 +115,7 @@ export default {
             Uster.getDrivers().then(r => this.xs = r.body, this.handleError);
         },
         handleError(e) {
-            this.error = e.message;
+            this.error = e.message || e.response.body.message;
         }
     }
 }

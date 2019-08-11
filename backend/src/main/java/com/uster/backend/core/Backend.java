@@ -2,6 +2,7 @@ package com.uster.backend.core;
 
 import com.uster.model.Driver;
 import com.uster.model.License;
+import com.uster.model.Trip;
 import com.uster.model.Vehicle;
 
 import java.util.stream.Stream;
@@ -25,5 +26,13 @@ public interface Backend {
     Driver lookup(Driver driver);
 
     Stream<Driver> drivers();
+
+    Trip upsert(Trip trip);
+
+    Trip remove(Trip trip);
+
+    Trip lookup(Trip trip);
+
+    Stream<Trip> trips();
 
 }

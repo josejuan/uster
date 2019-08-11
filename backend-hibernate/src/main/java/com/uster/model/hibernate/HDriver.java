@@ -21,11 +21,11 @@ public class HDriver implements ConvertTo<Driver>, HasId<Long> {
     @GeneratedValue
     private Long id;
 
-    @Column(length = 255, unique = true)
+    @Column(length = 255, unique = true, nullable = false)
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "HLicense_id")
+    @JoinColumn(name = "HLicense_id", nullable = false)
     private HLicense license;
 
     public static HDriver from(Driver x) {

@@ -3,6 +3,7 @@ package com.uster.backend;
 import com.uster.backend.core.Backend;
 import com.uster.model.Driver;
 import com.uster.model.License;
+import com.uster.model.Trip;
 import com.uster.model.Vehicle;
 import com.uster.model.hibernate.*;
 
@@ -103,5 +104,25 @@ public class HibernateBackend implements Backend {
     @Override
     public Stream<Driver> drivers() {
         return list(HDriver.class);
+    }
+
+    @Override
+    public Trip upsert(Trip trip) {
+        return upsert(HTrip.from(trip));
+    }
+
+    @Override
+    public Trip remove(Trip trip) {
+        return remove(HTrip.from(trip)).withId(null);
+    }
+
+    @Override
+    public Trip lookup(Trip trip) {
+        return lookup(HTrip.from(trip));
+    }
+
+    @Override
+    public Stream<Trip> trips() {
+        return list(HTrip.class);
     }
 }

@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/drivers">Drivers</router-link> |
       <router-link to="/carfleet">Car fleet</router-link> |
+      <router-link to="/trips">Trips</router-link> |
       <router-link to="/licenses">Licenses</router-link> |
       <router-link to="/about">About</router-link>
     </div>

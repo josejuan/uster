@@ -3,6 +3,7 @@ package com.uster.backend;
 import com.uster.backend.core.Backend;
 import com.uster.model.Driver;
 import com.uster.model.License;
+import com.uster.model.Trip;
 import com.uster.model.Vehicle;
 
 import java.util.Map;
@@ -13,6 +14,7 @@ import java.util.stream.Stream;
 public class FakeBackend implements Backend {
     private static Map<String, Vehicle> vehicles = new ConcurrentHashMap<>();
     private static Map<String, Driver> drivers = new ConcurrentHashMap<>();
+    private static Map<String, Trip> trips = new ConcurrentHashMap<>();
 
     @Override
     public Stream<License> licenses() {
@@ -47,7 +49,6 @@ public class FakeBackend implements Backend {
         return vehicles.values().stream();
     }
 
-
     @Override
     public Driver upsert(Driver driver) {
         final Driver withId = driver.getId() == null ? driver.withId(UUID.randomUUID().toString()) : driver;
@@ -70,5 +71,29 @@ public class FakeBackend implements Backend {
     @Override
     public Stream<Driver> drivers() {
         return drivers.values().stream();
+    }
+
+    @Override
+    public Trip upsert(Trip trip) {
+        final Trip withId = trip.getId() == null ? trip.withId(UUID.randomUUID().toString()) : trip;
+        trips.put(withId.getId(), withId);
+        return lookup(withId);
+    }
+
+    @Override
+    public Trip remove(Trip trip) {
+        final Trip current = lookup(trip);
+        trips.remove(current.getId());
+        return current.withId(null);
+    }
+
+    @Override
+    public Trip lookup(Trip trip) {
+        return trips.get(trip.getId());
+    }
+
+    @Override
+    public Stream<Trip> trips() {
+        return trips.values().stream();
     }
 }

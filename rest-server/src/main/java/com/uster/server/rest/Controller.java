@@ -2,6 +2,7 @@ package com.uster.server.rest;
 
 import com.uster.model.Driver;
 import com.uster.model.License;
+import com.uster.model.Trip;
 import com.uster.model.Vehicle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -84,6 +85,35 @@ public class Controller {
     @RequestMapping(path = "/drivers", method = GET)
     public /* Stream */ List<Driver> drivers() {
         return service.uster.drivers().collect(toList());
+    }
+
+    @RequestMapping(path = "/trips", method = PUT)
+    public Trip updateTrip(@RequestBody @NotNull final Trip trip) {
+        if (trip.getId() == null)
+            throw new IllegalArgumentException("'id' cannot be empty");
+        return service.uster.upsert(trip);
+    }
+
+    @RequestMapping(path = "/trips", method = POST)
+    public Trip insertTrip(@RequestBody final Trip trip) {
+        if (trip.getId() != null)
+            throw new IllegalArgumentException("'id' must be empty");
+        return service.uster.upsert(trip);
+    }
+
+    @RequestMapping(path = "/trips/{tripId}", method = DELETE)
+    public Trip removeTrip(final @NotBlank @PathVariable("tripId") String tripId) {
+        return service.uster.remove(Trip.builder().id(tripId).build());
+    }
+
+    @RequestMapping(path = "/trips/{tripId}", method = GET)
+    public Trip lookupTrip(final @NotBlank @PathVariable("tripId") String tripId) {
+        return service.uster.lookup(Trip.builder().id(tripId).build());
+    }
+
+    @RequestMapping(path = "/trips", method = GET)
+    public /* Stream */ List<Trip> trips() {
+        return service.uster.trips().collect(toList());
     }
 
 }

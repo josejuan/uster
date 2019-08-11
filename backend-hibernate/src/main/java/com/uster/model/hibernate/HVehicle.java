@@ -20,14 +20,14 @@ public class HVehicle implements ConvertTo<Vehicle>, HasId<Long> {
     @GeneratedValue
     private Long id;
 
-    @Column(length = 255, unique = true)
+    @Column(length = 255, unique = true, nullable = false)
     private String name;
 
-    @Column(length = 20, unique = true)
+    @Column(length = 20, unique = true, nullable = false)
     private String numberPlate;
 
     @ManyToOne
-    @JoinColumn(name = "HLicense_id")
+    @JoinColumn(name = "HLicense_id", nullable = false)
     private HLicense minimumLicenseRequired;
 
     public static HVehicle from(Vehicle x) {

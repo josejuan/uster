@@ -18,7 +18,12 @@ const api = {
     getDrivers() { return _api.driversUsingGET() },
     insertDriver(driver) { return _api.insertDriverUsingPOST({driver: driver}) },
     updateDriver(driver) { return _api.updateDriverUsingPUT({driver: driver}) },
-    removeDriver(driver) { return _api.removeDriverUsingDELETE({driverId: driver.id}) }
+    removeDriver(driver) { return _api.removeDriverUsingDELETE({driverId: driver.id}) },
+
+    getTrips() { return _api.tripsUsingGET() },
+    insertTrip(trip) { return _api.insertTripUsingPOST({trip: trip}) },
+    updateTrip(trip) { return _api.updateTripUsingPUT({trip: trip}) },
+    removeTrip(trip) { return _api.removeTripUsingDELETE({tripId: trip.id}) }
 
 };
 

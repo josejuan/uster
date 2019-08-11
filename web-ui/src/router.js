@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Drivers from './views/Drivers.vue'
 import Carfleet from './views/Carfleet.vue'
+import Trips from './views/Trips.vue'
 import Licenses from './views/Licenses.vue'
 
 Vue.use(Router)
@@ -25,6 +26,11 @@ export default new Router({
             path: '/carfleet',
             name: 'carfleet',
             component: Carfleet
+        },
+        {
+            path: '/trips',
+            name: 'trips',
+            component: Trips
         },
         {
             path: '/licenses',

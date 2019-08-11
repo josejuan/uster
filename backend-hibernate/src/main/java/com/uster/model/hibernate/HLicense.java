@@ -17,7 +17,7 @@ public class HLicense implements ConvertTo<License>, HasId<String> {
     @Id
     private String id;
 
-    @Column(length = 255, unique = true)
+    @Column(length = 255, unique = true, nullable = false)
     private String name;
 
     public static HLicense from(License x) {
