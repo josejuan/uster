@@ -1,0 +1,8 @@
+dependencies {
+    implementation project(':datamodel')
+    implementation project(':backend')
+    compile "org.hibernate:hibernate-core:${hibernateVersion}"
+    compile "org.apache.derby:derby:${derbyVersion}"
+    compile "org.apache.tomcat:tomcat-catalina:${tomcatCatalinaVersion}"
+    testCompile project(':backend').sourceSets.test.output
+}

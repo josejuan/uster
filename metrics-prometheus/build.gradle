@@ -1,0 +1,5 @@
+dependencies {
+    implementation project(':metrics')
+    compile "io.prometheus:simpleclient:${prometheusVersion}"
+    compile "io.prometheus:simpleclient_httpserver:${prometheusVersion}"
+}

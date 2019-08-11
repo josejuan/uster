@@ -1,0 +1,5 @@
+dependencies {
+    implementation project(':datamodel')
+    implementation project(':backend')
+    testCompile project(':backend').sourceSets.test.output
+}

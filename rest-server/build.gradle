@@ -1,0 +1,30 @@
+springBoot {
+    mainClassName = "com.uster.server.rest.Application"
+}
+
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+bootRun {
+    systemProperties = System.properties
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile 'org.springframework.boot:spring-boot-configuration-processor'
+    compile "io.springfox:springfox-swagger2:${springFoxVersion}"
+    compile "io.springfox:springfox-swagger-ui:${springFoxVersion}"
+    compile "javax.xml:jaxb-api:${jaxbVersion}"
+    compile "com.fasterxml.jackson.dataformat:jackson-dataformat-xml"
+
+    implementation project(':datamodel')
+    implementation project(':backend')
+    implementation project(':metrics')
+    implementation project(':business')
+    implementation project(':backend-default')
+    implementation project(':backend-hibernate')
+    implementation project(':metrics-stdout')
+    implementation project(':metrics-prometheus')
+
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}

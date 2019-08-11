@@ -1,0 +1,11 @@
+rootProject.name = 'parent'
+include 'backend'
+include 'datamodel'
+include 'backend-default'
+include 'business'
+include 'metrics'
+include 'metrics-prometheus'
+include 'metrics-stdout'
+include 'backend-hibernate'
+include 'rest-server'
+

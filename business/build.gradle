@@ -1,0 +1,11 @@
+dependencies {
+    implementation project(':datamodel')
+    implementation project(':backend')
+    implementation project(':metrics')
+    testImplementation project(':backend-default')
+    testImplementation project(':backend-hibernate')
+    testImplementation project(':metrics-stdout')
+    testImplementation project(':metrics-prometheus')
+    testCompile project(':backend').sourceSets.test.output
+    testCompile project(':backend-hibernate').sourceSets.test.output
+}
