@@ -109,7 +109,7 @@ only use _OAuth_ (the usual adopted solution for web based apps) but a more gene
 
 ### ============== Home ==============
 
-![Home](images/home.png | width=600)
+<img width="400" alt="Home" src="images/home.png" />
 
 ### ============== About ==============
 
