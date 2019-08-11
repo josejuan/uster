@@ -109,36 +109,36 @@ only use _OAuth_ (the usual adopted solution for web based apps) but a more gene
 
 ### ============== Home ==============
 
-<img width="400" alt="Home" src="images/home.png" />
+<img width="350" alt="Home" src="images/home.png" />
 
 ### ============== About ==============
 
-![About](images/about.png | width=600)
+<img width="350" alt="About" src="images/about.png" />
 
 ### ============== Licenses ==============
 
-![Licenses](images/licenses.png | width=600)
+<img width="350" alt="Licenses" src="images/licenses.png" />
 
 ### ============== Drivers ==============
 
-![Drivers](images/drivers.png | width=600)
+<img width="350" alt="Drivers" src="images/drivers.png" />
 
 ### ============== Carfleet ==============
 
-![Carfleet](images/carfleet.png | width=600)
+<img width="350" alt="Carfleet" src="images/carfleet.png" />
 
 ### ============== Trips ==============
 
-![Trips](images/trips.png | width=600)
+<img width="350" alt="Trips" src="images/trips.png" />
 
 ### ============== Error handling ==============
 
-![Error handling](images/errorhandling.png | width=600)
+<img width="350" alt="Error handling" src="images/errorhandling.png" />
 
 ### ============== Prometheus ==============
 
-![Prometheus target](images/prometheus.png | width=600)
+<img width="350" alt="Prometheus target" src="images/prometheus.png" />
 
-![Prometheus events](images/prometheus_events.png | width=600)
+<img width="350" alt="Prometheus events" src="images/prometheus_events.png" />
 
-![Prometheus metrics](images/prometheus_metrics.png | width=600)
+<img width="350" alt="Prometheus metrics" src="images/prometheus_metrics.png" />
