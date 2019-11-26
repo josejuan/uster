@@ -147,4 +147,5 @@ only use _OAuth_ (the usual adopted solution for web based apps) but a more gene
 
 ### 2019 november
 
-[x] Docker images
+[x] Docker rest-server image
+[x] kubernetes namespace and rest-server deploy
