@@ -142,3 +142,9 @@ only use _OAuth_ (the usual adopted solution for web based apps) but a more gene
 <img width="350" alt="Prometheus events" src="images/prometheus_events.png" />
 
 <img width="350" alt="Prometheus metrics" src="images/prometheus_metrics.png" />
+
+## UPDATES
+
+### 2019 november
+
+[x] Docker images

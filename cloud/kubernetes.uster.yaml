@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: uster
+  annotations:
+    description: See https://github.com/josejuan/uster
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  namespace: uster
+  name: rest-server
+  labels:
+    type: rest-server
+spec:
+  containers:
+  - name: rest-server
+    image: jbarco/uster:rest-server
+    ports:
+    - containerPort: 9092
+    - containerPort: 9091
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: uster
+  name: rest-server
+spec:
+  type: NodePort
+  selector:
+    type: rest-server
+  ports:
+  - protocol: TCP
+    port: 9092
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: uster
+  name: rest-server-metrics
+spec:
+  type: NodePort
+  selector:
+    type: rest-server
+  ports:
+  - protocol: TCP
+    port: 9091
