@@ -147,5 +147,10 @@ only use _OAuth_ (the usual adopted solution for web based apps) but a more gene
 
 ### 2019 november
 
-[x] Docker rest-server image
-[x] kubernetes namespace and rest-server deploy
+- [x] Docker rest-server image
+- [x] kubernetes namespace and rest-server deploy
+- [ ] Docker Prometheus image
+- [ ] Docker web-ui (nginx) image
+- [ ] Docker db image
+- [ ] maybe another nginx image (the front)
+- [ ] connect using kubernetes yaml
