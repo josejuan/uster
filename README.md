@@ -149,7 +149,7 @@ only use _OAuth_ (the usual adopted solution for web based apps) but a more gene
 
 - [x] Docker rest-server image
 - [x] kubernetes namespace and rest-server deploy
-- [ ] Docker Prometheus image
+- [ ] Kubernetes Prometheus infraestructure was configured following https://itnext.io/kubernetes-monitoring-with-prometheus-in-15-minutes-8e54d1de2e13
 - [ ] Docker web-ui (nginx) image
 - [ ] Docker db image
 - [ ] maybe another nginx image (the front)
