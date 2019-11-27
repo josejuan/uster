@@ -14,6 +14,7 @@ metadata:
     type: rest-server
   annotations:
     prometheus.io/scrape: 'true'
+    prometheus.io/path: '/'
     prometheus.io/port: '9091'
 spec:
   containers:
