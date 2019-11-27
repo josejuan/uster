@@ -12,6 +12,9 @@ metadata:
   name: rest-server
   labels:
     type: rest-server
+  annotations:
+    prometheus.io/scrape: 'true'
+    prometheus.io/port: '9091'
 spec:
   containers:
   - name: rest-server
