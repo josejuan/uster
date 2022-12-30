@@ -13,7 +13,7 @@
     "bootstrap-vue": "^2.0.0-rc.27",
     "core-js": "^2.6.5",
     "register-service-worker": "^1.6.2",
-    "swagger-client": "^3.9.3",
+    "swagger-client": "^3.18.5",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
   },
